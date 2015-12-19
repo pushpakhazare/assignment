@@ -48,6 +48,7 @@ class SiteController extends Controller
                 $userinfo = Yii::app()->facebook->getInfo();
                 $results = Yii::app()->facebook->api('/me/friends'); //,array('access_token'=>$my_access_token)
                 echo "<pre>"; print_r($results); 
+				echo "<pre>"; print_r($results); 
 exit;
 				if (!empty($userinfo)) {
 				echo "userinfo:";	
