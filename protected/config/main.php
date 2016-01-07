@@ -103,4 +103,18 @@ return array(
 		// this is used in contact page
 		'adminEmail'=>'webmaster@example.com',
 	),
+	'urlManager'=>array(
+    'urlFormat'=>'path',
+    'rules'=>array(
+        // REST patterns
+        array('site/list', 'pattern'=>'site/<model:\w+>', 'verb'=>'GET'),
+        // Other controllers
+        '<controller:\w+>/<action:\w+>'=>'<controller>/<action>',
+    ),
+),
 );
+// Set the environment to development, staging or production.
+$environment = 'development';
+require_once (dirname(__FILE__) . '/config.' . $environment . '.php');
+return $config;
+

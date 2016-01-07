@@ -1,6 +1,6 @@
 <?php
 
-class SiteController extends Controller
+class ApiController extends AController
 {
 	/**
 	 * Declares class-based actions.
@@ -116,10 +116,11 @@ class SiteController extends Controller
 		Yii::app()->user->logout();
 		$this->redirect(Yii::app()->homeUrl);
 	}
-		/**
+			/**
 	 * Logs out the current user and redirect to homepage.
 	 */
 	public function actionList()
 	{
 		echo $_GET['model'];
 	}
+}
